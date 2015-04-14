@@ -12,4 +12,4 @@
 (let [sulfuras [(item "Sulfuras, Hand of Ragnaros" 0 80)]]
 (describe "gilded rose"
   (it "should not affect legendary items"
-       (should (= sulfuras (pass-days 1 sulfuras))))))
+       (should= sulfuras (pass-days 1 sulfuras)))))
