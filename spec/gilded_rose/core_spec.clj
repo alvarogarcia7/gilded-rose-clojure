@@ -29,10 +29,12 @@
        ;(should= [(item "+5 Dexterity Vest" 9 0)] (pass-days 1 [(item "+5 Dexterity Vest" 10 0)]))
       )
   (describe "Aged Brie"
-  (it "actually increases in quality the older it gets"
-       (should= [(item "Aged Brie" 9 1)] (pass-days 1 [(item "Aged Brie" 10 0)])))
-  (it "actually increases in quality the older it gets, at the same rate after expiry"
-       (should= [(item "Aged Brie" -1 1)] (pass-days 1 [(item "Aged Brie" 0 0)])))
-  (it "actually increases in quality the older it gets, but the quality is never over 50"
-       (should= [(item "Aged Brie" -1 50)] (pass-days 1 [(item "Aged Brie" 0 50)])))
-)))
+    (it "actually increases in quality the older it gets"
+         (should= [(item "Aged Brie" 9 1)] (pass-days 1 [(item "Aged Brie" 10 0)])))
+    (it "actually increases in quality the older it gets, at the same rate after expiry"
+         (should= [(item "Aged Brie" -1 1)] (pass-days 1 [(item "Aged Brie" 0 0)])))
+    (it "actually increases in quality the older it gets, but the quality is never over 50"
+         (should= [(item "Aged Brie" -1 50)] (pass-days 1 [(item "Aged Brie" 0 50)])))
+  )
+
+))
