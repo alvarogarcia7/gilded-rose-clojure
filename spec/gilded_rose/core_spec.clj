@@ -6,7 +6,10 @@
   (it "the framework should work"
        (should true)))
 
+(defn pass-days [n inventory]
+  (nth (iterate update-quality inventory) n))
+
 (let [sulfuras [(item "Sulfuras, Hand of Ragnaros" 0 80)]]
 (describe "gilded rose"
   (it "should not affect legendary items"
-       (should (= sulfuras (update-quality sulfuras))))))
+       (should (= sulfuras (pass-days 1 sulfuras))))))
