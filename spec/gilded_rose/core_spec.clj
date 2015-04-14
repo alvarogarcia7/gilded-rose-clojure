@@ -21,4 +21,11 @@
        (should= [(item "+5 Dexterity Vest" -2 8)] (pass-days 1 [(item "+5 Dexterity Vest" -1 10)]))
        (should= [(item "+5 Dexterity Vest" -3 6)] (pass-days 2 [(item "+5 Dexterity Vest" -1 10)]))
       )
+  (it "The quality of an item is never negative"
+      ; this test is not working correctly
+       (should= [(item "+5 Dexterity Vest" 9 -1)] (pass-days 1 [(item "+5 Dexterity Vest" 10 0)]))
+
+       ; this is the correct test
+       ;(should= [(item "+5 Dexterity Vest" 9 0)] (pass-days 1 [(item "+5 Dexterity Vest" 10 0)]))
+      )
 ))
