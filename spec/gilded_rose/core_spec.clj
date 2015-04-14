@@ -28,4 +28,8 @@
        ; this is the correct test
        ;(should= [(item "+5 Dexterity Vest" 9 0)] (pass-days 1 [(item "+5 Dexterity Vest" 10 0)]))
       )
+
+  (it "Aged Brie actually increases in quality the older it gets"
+       (should= [(item "Aged Brie" 9 1)] (pass-days 1 [(item "Aged Brie" 10 0)]))
+      )
 ))
